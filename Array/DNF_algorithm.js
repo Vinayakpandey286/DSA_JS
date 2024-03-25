@@ -28,7 +28,7 @@ const arr = [1,0,0,1,1,1,0,1,0,0,1]
 let i =0
 let j=arr.length-1
 
-while(i<j){
+while(i<=j){
 if(arr[i]%2===1){
   temp = arr[i]
   arr[i]=arr[j]
