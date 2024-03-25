@@ -29,14 +29,14 @@ let i =0
 let j=arr.length-1
 
 while(i<=j){
-if(arr[i]%2===1){
+if(arr[i]%2===1){ // check for 1 at first index
   temp = arr[i]
   arr[i]=arr[j]
   arr[j]=temp
-  j--
+  j--  // threw new 1 at right window
   
 }else{
-  i++
+  i++ // expand left window directly
 }
   
 }
