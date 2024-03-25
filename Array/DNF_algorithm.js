@@ -1,5 +1,7 @@
 const arr = [1,0,0,1,1,1,0,1,0,0,1]
 
+// seprate 0 and 1
+
 // 1st method but it iterates 2 times
 // let zero = 0
 // let one =0
