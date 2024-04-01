@@ -25,11 +25,12 @@ const arr = [1,0,0,1,1,1,0,1,0,0,1]
 
 // best method DNF (Dutch national flag) algorithm
 
+debugger
 let i =0
 let j=arr.length-1
 
 while(i<=j){
-if(arr[i]%2===1){ // check for 1 at first index
+if(arr[i]===1){ // check for 1 at first index
   temp = arr[i]
   arr[i]=arr[j]
   arr[j]=temp
