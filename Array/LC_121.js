@@ -2,6 +2,8 @@
  * @param {number[]} prices
  * @return {number}
  */
+
+// Best time to Buy a Stock
 var maxProfit = function (prices) {
   let profit = 0;
   let min = prices[0];
