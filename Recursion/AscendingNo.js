@@ -1,4 +1,3 @@
-debugger
 function naturalNumbers(n) {
   if (n === 0) return;
   naturalNumbers(n - 1);
