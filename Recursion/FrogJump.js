@@ -1,4 +1,4 @@
-let arr = [30, 10, 60, 10, 60, 50];
+let arr = [10, 30, 40, 20];
 
 function frogJump(i, n) {
   if (i === n) return 0;
