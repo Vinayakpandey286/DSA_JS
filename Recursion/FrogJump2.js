@@ -14,9 +14,9 @@ function frogJump2(i, n, k) {
       Math.abs(arr[i] - arr[j]) + frogJump2(i + j, n, k),
       result
     );
-    return result
+    // return result
   }
   return result;
 }
 
-console.log(frogJump2(0, arr.length - 1, 3));
+console.log(frogJump2(0, arr.length - 1, 2));
