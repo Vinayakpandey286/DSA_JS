@@ -1,5 +1,5 @@
 let arr = [10, 30, 40, 20];
-debugger;
+
 function frogJump2(i, n, k) {
   if (i === n) return 0;
   if (i === n - 1) {
@@ -14,8 +14,9 @@ function frogJump2(i, n, k) {
       Math.abs(arr[i] - arr[j]) + frogJump2(i + j, n, k),
       result
     );
+    return result
   }
   return result;
 }
 
-console.log(frogJump2(0, arr.length - 1, 2));
+console.log(frogJump2(0, arr.length - 1, 3));
