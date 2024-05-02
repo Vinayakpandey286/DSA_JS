@@ -28,3 +28,13 @@ function Get_Mazepath(sr, sc, dr, dc) {
 
 let path = Get_Mazepath(1, 1, 3, 3);
 console.log(path.length);
+
+
+// to count no. of ways we can reach destination
+function fn(sr, sc, dr, dc) {
+  if (sr == dr - 1 && sc == dc - 1) return 1;
+  if (sr >= dr || sc >= dc) return 0;
+
+  return fn(sr, sc + 1, dr, dc) + fn(sr + 1, sc, dr, dc);
+  // type your own code here
+}
