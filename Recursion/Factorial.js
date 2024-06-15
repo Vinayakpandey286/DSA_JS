@@ -1,11 +1,8 @@
-let arr =[10,30,20,40]
+const factorial = (n) => {
+  if (n === 1) return n
 
-function frogJump(n){
-  if(n>arr.length-1) return
-  
-  let first_jump = frogJump(n+1)
-  let second_jump = frogJump(n+2)
-  
+  let val = n * factorial(n - 1)
+  return val
 }
 
-console.log(frogJump(0))
+console.log(factorial(4))
