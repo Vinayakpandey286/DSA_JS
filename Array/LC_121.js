@@ -4,7 +4,7 @@
  */
 
 // Best time to Buy a Stock
-var maxProfit = function (prices) {
+var maxProfit = function (prices) { //[7,1,5,3,6,4]
   let profit = 0;
   let min = prices[0];
 
