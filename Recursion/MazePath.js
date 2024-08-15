@@ -36,5 +36,6 @@ function fn(sr, sc, dr, dc) {
   if (sr >= dr || sc >= dc) return 0;
 
   return fn(sr, sc + 1, dr, dc) + fn(sr + 1, sc, dr, dc);
-  // type your own code here
 }
+
+console.log(fn(0,0 ,3,3))
