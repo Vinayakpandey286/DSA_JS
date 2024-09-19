@@ -52,8 +52,6 @@ function mergeSort(arr, i, j) {
     mergeSort(arr, mid+1,j)
     merge(arr, i, mid, mid+1, j)
   
-    // return arr
-  
 }
 
 
