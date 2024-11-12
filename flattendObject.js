@@ -24,7 +24,6 @@ const nestedObject = {
   g: 5
 };
 
-debugger
 const flattenedObjectOutput = flattenObject(nestedObject);
 console.log(flattenedObjectOutput);
 
@@ -32,30 +31,5 @@ console.log(flattenedObjectOutput);
 
 
 
-// function sum(a, b) {
-//     console.log('calculating sum')
-    
-//     return a+b
-    
-//   }
-  
-//   function memoizeSum(fn){
-    
-//     const value = {}
-    
-//   return fn(a,b){
-//     if(value.hasOwnProperty('ab')){
-//       return value['ab']
-//     }else{
-//       value['ab'] = a+b
-//       return a+b
-//     }
-//   }
-//   }
-  
-//   const memoizedSum = memoizeSum(sum);
-  
-//   console.log(memoizedSum(3, 4));  
-//   console.log(memoizedSum(3, 4)); 
-//   console.log(memoizedSum(5, 6));
+
   
