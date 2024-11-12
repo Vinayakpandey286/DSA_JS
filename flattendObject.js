@@ -1,42 +1,33 @@
-const nestedObject = {
-    a: 1,
-    b: {
-      c: 2,
-      d: {
-        e: 3,
-        f: 4
+function flattenObject(obj, parentKey = '', result = {}) {
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      const newKey = parentKey ? `${parentKey}_${key}` : key;
+      if (typeof obj[key] === 'object' && obj[key] !== null) {
+        flattenObject(obj[key], newKey, result);
+      } else {
+        result[newKey] = obj[key];
       }
-    },
-    g: 5
-  };
-
-// 	const flattenedObjectOutput = {
-// 	  a: 1,
-// 	  'b_c': 2,
-// 	  'b_d_e': 3,
-// 	  'b_d_f': 4,
-// 	  g: 5
-// 	};
-
-const newObj = {}
-function giveKeysAndvalue(key,obj){
-if(typeof obj !== "object"){
-  newObj[key]=obj
-  return
+    }
+  }
+  return result;
 }
 
-for(const [key,value] of Object.entries(obj)){
-if(typeof value === "object"){
-  giveKeysAndvalue(value)
-  
-}
-}
-}
+const nestedObject = {
+  a: 1,
+  b: {
+    c: 2,
+    d: {
+      e: 3,
+      f: 4
+    }
+  },
+  g: 5
+};
 
+debugger
+const flattenedObjectOutput = flattenObject(nestedObject);
+console.log(flattenedObjectOutput);
 
-for(const [key,value] of Object.entries(nestedObject)){
-  const flattednedObject = giveKeysAndvalue(key,value)
-}
 
 
 
@@ -50,13 +41,13 @@ for(const [key,value] of Object.entries(nestedObject)){
   
 //   function memoizeSum(fn){
     
-//     const obj = {}
+//     const value = {}
     
 //   return fn(a,b){
-//     if(obj.hasOwnProperty('ab')){
-//       return obj['ab']
+//     if(value.hasOwnProperty('ab')){
+//       return value['ab']
 //     }else{
-//       obj['ab'] = a+b
+//       value['ab'] = a+b
 //       return a+b
 //     }
 //   }

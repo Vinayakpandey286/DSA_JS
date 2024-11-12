@@ -25,7 +25,6 @@ const arr = [1,0,0,1,1,1,0,1,0,0,1]
 
 // best method DNF (Dutch national flag) algorithm
 
-debugger
 let i =0
 let j=arr.length-1
 
