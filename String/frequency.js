@@ -1,15 +1,27 @@
 function frequency(str) {
-    const hmap = {}
 
-    for (let i = 0; i < str.length; i++) {
-        if (hmap.hasOwnProperty(str[i])) {
-            hmap[str[i]] = hmap[str[i]] + 1
-        } else {
-            hmap[str[i]] = 1
-        }
+    let splitarray = str.split('').sort((a,b)=> a.localeCompare(b))
+
+    let  count  = 0
+    let newStr = ''
+
+    for(let i =0; i <splitarray.length; i++){
+        if(splitarray[i]===splitarray[i+1]){
+            count++
+        }else{
+            count++
+            newStr+= splitarray[i]+String(count)
+            count = 0
+        }      
     }
+
+
+    
+    console.log(newStr, splitarray)
+
+    
 
 }
 
-console.log(frequency("ggggoolaaanng"))
+frequency("ggggoolaaanng")
 
