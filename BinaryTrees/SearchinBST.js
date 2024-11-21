@@ -12,13 +12,12 @@
  * @return {TreeNode}
  */
 
-
+function searchNode(r, val) {
+    if (r === null) return null
+    if (r.val === val) return r
+    let value = val > r.val ? searchNode(r.right, val) : searchNode(r.left, val)
+    return value
+}
 var searchBST = function (root, val) {
-    function searchNode(r, val) {
-        if (r === null) return null
-        if (r.val === val) return r
-        let value = val > r.val ? searchNode(r.right, val) : searchNode(r.left, val)
-        return value
-    }
     return searchNode(root, val)
 };
