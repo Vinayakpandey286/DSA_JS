@@ -5,7 +5,6 @@ function sum(a, b) {
 
 function memoizeSum(fn) {
     const value = {};
-    console.log('hi',value)
 
     return function (a, b) {
         const key = `${a},${b}`;  // Unique key for each argument pair
@@ -17,7 +16,7 @@ function memoizeSum(fn) {
         }
     };
 }
-
+debugger
 const memoizedSum = memoizeSum(sum);
 
 console.log(memoizedSum(3, 4));  // Output: calculating sum 7
