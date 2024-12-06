@@ -17,9 +17,7 @@ function frequency(str) {
 
 
     
-    console.log(newStr, splitarray)
-
-    
+    console.log(newStr, splitarray)    
 
 }
 
